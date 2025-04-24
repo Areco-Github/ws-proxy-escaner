@@ -29,6 +29,6 @@ Ejecutar:
 
 python escaner.py
 
-Agregar Host cdn
-Agregar proxy(opcional)
+Agregar Host cdn                                       
+Agregar proxy(opcional)                                
 Continuar y usar lo que necesitas. 
