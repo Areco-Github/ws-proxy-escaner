@@ -23,8 +23,8 @@ cd ws-proxy-scanner
 # Instalar dependencias
 pip install requests websockets
 
-#🚀 Uso#
+## 🚀 Uso
 
-Ejecutar: 
+# Ejecutar: 
 
 python escaner.py
