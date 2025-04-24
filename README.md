@@ -23,8 +23,12 @@ cd ws-proxy-scanner
 # Instalar dependencias
 pip install requests websockets
 
-## 🚀 Uso
+# 🚀 Uso
 
-# Ejecutar: 
+Ejecutar: 
 
 python escaner.py
+
+Agregar Host cdn
+Agregar proxy(opcional)
+Continuar y usar lo que necesitas. 
