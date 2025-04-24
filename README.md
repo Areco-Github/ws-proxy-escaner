@@ -17,7 +17,7 @@ pkg update && pkg upgrade
 pkg install git python -y
 
 # Clonar el repositorio
-git clone https://github.com/tuusuario/ws-proxy-scanner.git
+git clone https://github.com/Areco-Github/ws-proxy-scanner.git
 cd ws-proxy-scanner
 
 # Instalar dependencias
