@@ -340,18 +340,50 @@ def menu():
         print("1. Iniciar escaneo desde subdominios")
         print("2. Buscar subdominios")
         print("0. Salir")
-        opcion = input("👉 Opción: ").strip()
+        opcion = input("👉 Opción: ")
+
         if opcion == "1":
-            hosts = cargar_hosts_desde_archivo()
-            if hosts:
-                seleccion_tipo_escaneo(hosts)
+            print("\nSelecciona una opción para escanear subdominios:")
+            print("1. Escanear desde una lista introducida por el usuario")
+            print("2. Escanear desde los archivos en la carpeta de subdominios")
+            subopcion = input("👉 Opción: ")
+
+            if subopcion == "1":
+                # Opción para ingresar una lista de subdominios
+                print("\nIntroduce la lista de subdominios (cada uno en una nueva línea). Cuando termines, presiona 'Enter' para confirmar.")
+                print("Ejemplo:\nappdev.claro.com.py\naprendeconclaro.claro.com.py\n...")
+                print("Para terminar, simplemente presiona 'Enter' en una línea vacía.")
+                
+                # Leer múltiples líneas y separarlas
+                subdominios = []
+                while True:
+                    subdominio = input("👉 Subdominio: ").strip()
+                    if subdominio == "":
+                        break  # Termina el input cuando se presiona 'Enter' en una línea vacía
+                    subdominios.append(subdominio)
+
+                if subdominios:
+                    print(f"\nEscaneando {len(subdominios)} subdominios...")
+                    seleccion_tipo_escaneo(subdominios)
+                else:
+                    print("❌ No se ingresaron subdominios.")
+            
+            elif subopcion == "2":
+                # Opción para cargar subdominios desde archivos
+                hosts = cargar_hosts_desde_archivo()
+                if hosts:
+                    seleccion_tipo_escaneo(hosts)
+            else:
+                print("❌ Opción no válida.")
+
         elif opcion == "2":
             buscar_subdominios()
         elif opcion == "0":
-            print("👋 Hasta la próxima!")
+            print("🔴 Saliendo...")
             break
         else:
-            print("❌ Opción inválida.")
+            print("❌ Opción no válida.")
+
 
 if __name__ == "__main__":
     menu()
