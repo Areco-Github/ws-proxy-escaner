@@ -198,9 +198,9 @@ def mostrar_configuracion():
 
 # Selección de tipo de escaneo
 def seleccion_tipo_escaneo(hosts):
-    print("1. Rápido (2s)")
-    print("2. Multihilo (2s)")
-    print("3. Completo (5s)")
+    print("1. Rápido (Escaneo normal)")
+    print("2. Multihilo (Recomendado, varios hosts a la vez)")
+    print("3. Completo (Con mas detalles pero lento)")
     modo = input("👉 Tipo de escaneo: ").strip()
     global encontrados
     encontrados = []
@@ -337,8 +337,8 @@ def menu():
     configurar_entorno()
     while True:
         print("\n💡 Menú")
-        print("1. Iniciar escaneo desde subdominios")
-        print("2. Buscar subdominios")
+        print("1. Iniciar escaneo de subdominios(usar con datos móviles sin saldo)")
+        print("2. Buscar subdominios(necesita conexión a internet)")
         print("0. Salir")
         opcion = input("👉 Opción: ")
 
